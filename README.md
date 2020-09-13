@@ -4,7 +4,7 @@ linux shell办公工具集
 #### 使用
 
 ```sh
-source ./sh-otils/rocess.sh
+source ./sh-otils/process.sh
 ```
 
 #### 进程相关
