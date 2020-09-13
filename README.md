@@ -8,6 +8,10 @@ source ./sh-otils/process.sh
 ```
 
 #### 进程相关
-- isprocessrun
+
+```sh
+source ./process.sh 
+isprocessrun nginx
+```
 
  
