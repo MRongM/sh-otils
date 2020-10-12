@@ -1,3 +1,6 @@
-echo "start test.sh"
-sleep 2
-echo "end test.sh"
+source tools.sh
+
+echo "odate start"
+odate
+echo "odate end"
+echo 

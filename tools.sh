@@ -40,7 +40,7 @@ onoproxy(){
 }
 
 ocost(){
-	# sript run cost
+	# script run cost
 	starttime=`date +'%Y-%m-%d %H:%M:%S'`
 	code=`sh $1`
 	endtime=`date +'%Y-%m-%d %H:%M:%S'`
