@@ -69,5 +69,10 @@ oport(){
 
 omatchword(){
 	# $1 dir $2 word
+	if test ! -d $1;then
+		echo "$1 is not dir";
+		return 1;
+	fi
+	
 	find $1 -type f |xargs grep "$2"
 }
