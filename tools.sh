@@ -67,3 +67,7 @@ oport(){
 	netstat -anlp |grep $1
 }
 
+omatchword(){
+	# $1 dir $2 word
+	find $1 -type f |xargs grep "$2"
+}
