@@ -1,6 +1,6 @@
 
 # source tools.sh new
-if [[ $1 == "new" ]]; then
+if [[ $1 == "django_new" ]]; then
   env_name='demo'
   conda create -n $env_name python=3.6.5 -y
   conda activate $env_name
@@ -17,7 +17,7 @@ if [[ $1 == "new" ]]; then
 fi
 
 # source tools.sh remove
-if [[ $1 == 'remove' ]];then
+if [[ $1 == 'django_remove' ]];then
   env_name='demo'
   conda deactivate
   conda remove -n $env_name --all -y
