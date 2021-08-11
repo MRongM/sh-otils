@@ -8,7 +8,13 @@ if [[ $1 == '-h' ]];then
   echo "  -w  crawl exec:bash tools.sh -w [name]"
 fi
 
-source script/django.sh
+#files=`ls script`
+for file in script/*
+do
+   source $file
+done
+
+#source script/django.sh
 
 if [[ $1 == '-g' || $1 == 'g' ]];then
   git commit -am "auto update"
