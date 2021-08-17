@@ -1,7 +1,14 @@
 if [[ $1 == "ssh_key" ]];then
    ssh-keygen -t rsa -C idskof@sina.cn
-   echo "编辑.ssh/config"
-   vim .ssh/config   
+   echo "编辑~/.ssh/config"
+   echo "==============="
+   echo 'Host github.com
+Hostname github.com
+User MRongM
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_rsa
+Port 22'
+   echo "==============="
 fi
 
 if [[ $1 == "ssh_test" ]];then
