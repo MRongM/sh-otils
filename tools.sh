@@ -8,22 +8,35 @@ if [[ $1 == '-h' ]];then
   echo "  -w  crawl exec:bash tools.sh -w [name]"
 fi
 
+#files=`ls script`
+for file in script/*
+do
+   source $file
+done
+
+#source script/django.sh
 
 if [[ $1 == '-g' || $1 == 'g' ]];then
   git commit -am "auto update"
   git push origin master
 fi
 
-if [[ $1 == '-i' ]];then
-  bash yum-init.sh
+#source
+if [[ $1 == 'sp' ]];then
+   
+   http_proxy=http://localhost:7890
+   https_proxy=http://localhost:7890
 fi
 
-if [[ $1 == '-c' ]];then
-  source centos-cmd.sh
+#source
+if [[ $1 == 'up' ]];then
+   unset http_proxy
+   unset https_proxy
 fi
 
-if [[ $1 == '-w' ]];then
-  bash crawl.sh $2
+#fast git
+if [[ $1 == 'fg' ]];then
+  git add *
+  git commit -am "update"
+  git push origin master
 fi
-
-
